@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PRISM: Proxy Recognition and Inclusive Scoring Method</title>
+    <title>Adaptive Book Recommendation and Rating Prediction System Using NLP and Machine Learning</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Optional Google Font -->
@@ -10,11 +10,11 @@
 
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #0b1220;
-            --card-border: #1f2937;
-            --accent: #38bdf8;
-            --accent-soft: rgba(56, 189, 248, 0.1);
+            --bg: #0f172a;
+            --bg-card: #111827;
+            --border: #1f2937;
+            --accent: #3b82f6;
+            --accent-soft: #1d4ed8;
             --text-main: #e5e7eb;
             --text-muted: #9ca3af;
             --text-strong: #f9fafb;
@@ -28,7 +28,7 @@
 
         body {
             font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #1f2937 0, #020617 60%);
+            background-color: var(--bg);
             color: var(--text-main);
             min-height: 100vh;
             display: flex;
@@ -39,24 +39,21 @@
         .page {
             width: 100%;
             max-width: 900px;
-            background: rgba(15, 23, 42, 0.96);
-            border-radius: 18px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            box-shadow:
-                0 18px 45px rgba(15, 23, 42, 0.8),
-                0 0 0 1px rgba(15, 23, 42, 0.8);
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid rgba(55, 65, 81, 0.9);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.8);
             padding: 28px 24px 24px;
         }
 
         @media (min-width: 768px) {
             .page {
                 padding: 32px 40px 32px;
-                border-radius: 22px;
             }
         }
 
         header {
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
 
         .pill {
@@ -65,11 +62,11 @@
             gap: 8px;
             padding: 4px 10px;
             border-radius: 999px;
-            background: rgba(15, 118, 110, 0.14);
-            border: 1px solid rgba(45, 212, 191, 0.4);
-            color: #a5f3fc;
+            background-color: #022c22;
+            border: 1px solid #22c55e;
+            color: #bbf7d0;
             font-size: 12px;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
         }
 
@@ -77,20 +74,19 @@
             width: 6px;
             height: 6px;
             border-radius: 999px;
-            background: #22c55e;
-            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+            background-color: #22c55e;
         }
 
         h1 {
-            font-size: 26px;
-            line-height: 1.25;
+            font-size: 24px;
+            line-height: 1.3;
             margin-top: 14px;
             color: var(--text-strong);
         }
 
         @media (min-width: 768px) {
             h1 {
-                font-size: 30px;
+                font-size: 28px;
             }
         }
 
@@ -98,7 +94,7 @@
             font-size: 16px;
             font-weight: 400;
             margin-top: 6px;
-            color: #cbd5f5;
+            color: #c7d2fe;
         }
 
         .subtitle {
@@ -111,14 +107,13 @@
 
         main {
             display: grid;
-            gap: 20px;
+            gap: 18px;
         }
 
         .section {
-            border-radius: 14px;
-            border: 1px solid var(--card-border);
-            background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 55%),
-                        var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background-color: #020617;
             padding: 16px 16px 18px;
         }
 
@@ -126,107 +121,63 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
             gap: 8px;
+            margin-bottom: 10px;
         }
 
         .section-title {
             font-size: 14px;
             font-weight: 600;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.06em;
             text-transform: uppercase;
-            color: #9ca3ff;
+            color: #a5b4fc;
         }
 
         .section-tag {
-            font-size: 11px;
+            font-size: 12px;
             color: var(--text-muted);
         }
 
         .section p {
             font-size: 14px;
-            color: var(--text-main);
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
             padding: 8px 14px;
             border-radius: 999px;
-            border: 1px solid rgba(56, 189, 248, 0.6);
-            background: linear-gradient(to right, rgba(56, 189, 248, 0.12), rgba(37, 99, 235, 0.12));
-            color: #e0f2fe;
+            border: 1px solid var(--accent-soft);
+            background-color: var(--accent);
+            color: white;
             font-size: 13px;
             font-weight: 500;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
         }
 
         .btn:hover {
-            background: linear-gradient(to right, rgba(56, 189, 248, 0.22), rgba(37, 99, 235, 0.22));
+            background-color: var(--accent-soft);
             transform: translateY(-1px);
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.9);
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.8);
         }
 
         .btn-secondary {
-            border-color: rgba(148, 163, 184, 0.8);
-            background: rgba(15, 23, 42, 0.8);
+            border-color: #4b5563;
+            background-color: #111827;
             color: var(--text-main);
         }
 
         .btn-secondary:hover {
-            background: rgba(15, 23, 42, 1);
-        }
-
-        .btn-icon {
-            font-size: 14px;
-            opacity: 0.85;
-        }
-
-        .poster-body {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .poster-text {
-            font-size: 14px;
-            color: var(--text-muted);
-            max-width: 380px;
-        }
-
-        .poster-meta {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #a5b4fc;
-        }
-
-        .chip-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 10px;
-        }
-
-        .chip {
-            font-size: 11px;
-            padding: 4px 8px;
-            border-radius: 999px;
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(148, 163, 184, 0.5);
-            color: #cbd5f5;
+            background-color: #020617;
         }
 
         .author-list {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 10px;
+            gap: 12px;
         }
 
         @media (min-width: 640px) {
@@ -236,10 +187,9 @@
         }
 
         .author-card {
-            border-radius: 12px;
-            border: 1px solid rgba(148, 163, 184, 0.5);
-            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.09), transparent 55%),
-                        rgba(15, 23, 42, 0.96);
+            border-radius: 10px;
+            border: 1px solid #374151;
+            background-color: #020617;
             padding: 10px 12px 12px;
         }
 
@@ -258,7 +208,7 @@
         .author-email {
             font-size: 13px;
             margin-top: 8px;
-            color: #e5e7eb;
+            color: var(--text-main);
             word-break: break-all;
         }
 
@@ -266,7 +216,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .author-link {
@@ -277,6 +227,17 @@
 
         .author-link:hover {
             text-decoration: underline;
+        }
+
+        .section-text {
+            font-size: 14px;
+            color: var(--text-main);
+            max-width: 600px;
+        }
+
+        .section-text span {
+            color: #a5b4fc;
+            font-weight: 500;
         }
 
         .section-row {
@@ -293,21 +254,10 @@
             }
         }
 
-        .section-text {
-            font-size: 14px;
-            color: var(--text-main);
-            max-width: 500px;
-        }
-
-        .section-text span {
-            color: #a5b4fc;
-            font-weight: 500;
-        }
-
         footer {
             margin-top: 18px;
             padding-top: 10px;
-            border-top: 1px solid rgba(31, 41, 55, 0.9);
+            border-top: 1px solid #1f2937;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -332,51 +282,52 @@
 
         <h1>Adaptive Book Recommendation and Rating Prediction System Using NLP and Machine Learning</h1>
 
+        <h2>Personalized book discovery using text features and predictive modeling</h2>
+
         <p class="subtitle">
-            This site accompanies our research poster for the Fall 2025 Computing Showcase.
-          The objective of this project is to develop an adaptive system that learns a user’s
-          reading preferences, predicts the rating they would assign to new books, and recommends 
-          additional books based on thematic similarity. The system also allows dynamic updates 
-          through ISBN-based book entries, supporting continuous learning without requiring full retraining after each addition.
+            This site accompanies our research poster for the Fall 2025 Computing Showcase. The project builds an
+            adaptive system that uses natural language processing and machine learning to recommend books and
+            predict user ratings based on book descriptions, metadata, and reader feedback.
         </p>
     </header>
 
     <main>
+        <!-- Project Overview -->
+        <section class="section" id="overview">
+            <div class="section-header">
+                <div>
+                    <div class="section-title">Project Overview</div>
+                    <div class="section-tag">What this system is designed to do</div>
+                </div>
+            </div>
+
+            <p class="section-text">
+                The Adaptive Book Recommendation and Rating Prediction System combines text processing,
+                feature engineering, and supervised learning to model how readers respond to different books.
+                We extract information from book titles, descriptions, authors, and genres, build numerical
+                representations with NLP techniques, then train models that can recommend new titles and
+                estimate expected ratings for unseen books.
+            </p>
+        </section>
+
         <!-- Project Poster -->
         <section class="section" id="poster">
             <div class="section-header">
                 <div>
                     <div class="section-title">Project Poster</div>
-                    <div class="section-tag">Overview of the full experimental pipeline</div>
+                    <div class="section-tag">Summary of the pipeline and results</div>
                 </div>
                 <a class="btn" href="poster.pdf" target="_blank" rel="noopener noreferrer">
-                    <span class="btn-icon">⬈</span>
-                    <span>View Poster (PDF)</span>
+                    View Poster (PDF)
                 </a>
             </div>
 
-            <div class="poster-body">
-                <div class="poster-text">
-                    <p>
-                    The objective of this project is to develop an adaptive system that learns a user’s reading
-                    preferences, predicts the rating they would assign to new books, and recommends additional books
-                    based on thematic similarity. The system also allows dynamic updates through ISBN-based book
-                    entries, supporting continuous learning without requiring full retraining after each addition.
-                    </p>
-                    <div class="chip-row">
-                        <span class="chip">Synthetic resumes</span>
-                        <span class="chip">Prompt engineering</span>
-                        <span class="chip">Bias measurement</span>
-                        <span class="chip">Score normalization</span>
-                    </div>
-                </div>
-                <div>
-                    <div class="poster-meta">File</div>
-                    <p style="font-size: 13px; margin-top: 4px; color: var(--text-main);">
-                        PRISM_Resume_Bias_Poster_Fall_2025.pdf
-                    </p>
-                </div>
-            </div>
+            <p class="section-text">
+                The poster outlines the full workflow, including data collection, preprocessing,
+                NLP feature extraction, model selection, evaluation, and error analysis. It also
+                highlights how recommendation quality changes with different feature sets and models
+                and discusses future directions such as incorporating user profiles and temporal reading patterns.
+            </p>
         </section>
 
         <!-- Authors -->
@@ -384,14 +335,14 @@
             <div class="section-header">
                 <div>
                     <div class="section-title">Authors</div>
-                    <div class="section-tag">Students and collaborators on this project</div>
+                    <div class="section-tag">Contributors to this project</div>
                 </div>
             </div>
 
             <div class="author-list">
                 <article class="author-card">
                     <div class="author-name">Destiny Raburnel</div>
-                    <div class="author-role">Data Engineer, Graduate Researcher</div>
+                    <div class="author-role">Data Engineer, Graduate Student in Artificial Intelligence</div>
                     <div class="author-email">draburne@students.kennesaw.edu</div>
                     <div class="author-links">
                         <a class="author-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
@@ -418,18 +369,18 @@
             <div class="section-header">
                 <div>
                     <div class="section-title">Repository</div>
-                    <div class="section-tag">Code, experiments, and documentation</div>
+                    <div class="section-tag">Code and experiment notebooks</div>
                 </div>
-                <a class="btn btn-secondary" href="https://github.com/your-username/prism-repo" target="_blank" rel="noopener noreferrer">
-                    <span class="btn-icon">⬈</span>
-                    <span>GitHub Repository</span>
+                <a class="btn btn-secondary" href="https://github.com/your-username/book-recs" target="_blank" rel="noopener noreferrer">
+                    GitHub Repository
                 </a>
             </div>
 
             <p class="section-text">
-                The repository contains experiment scripts, prompt templates, and analysis notebooks used in the PRISM study.
-                It is organized to help other researchers reproduce our results and adapt the framework to their own
-                resume screening experiments.
+                The repository contains data preprocessing scripts, NLP feature extraction code,
+                model training and evaluation notebooks, and utilities for generating recommendations.
+                It is organized so that other students and researchers can reproduce the experiments
+                and extend the system with new models or features.
             </p>
         </section>
 
@@ -438,22 +389,21 @@
             <div class="section-header">
                 <div>
                     <div class="section-title">Contact</div>
-                    <div class="section-tag">Questions, feedback, and collaborations</div>
+                    <div class="section-tag">Questions and collaborations</div>
                 </div>
             </div>
 
             <div class="section-row">
                 <p class="section-text">
-                    For questions about the project, or if you are interested in extending PRISM to other domains,
-                    please reach out to <span>Destiny Raburnel</span> or the co author by email.
-                    We welcome collaboration with researchers, practitioners, and organizations exploring bias in
-                    automated screening workflows.
+                    For questions about the project, or if you are interested in applying this approach to other
+                    recommendation tasks, please reach out to <span>Destiny Raburnel</span> by email. Collaboration
+                    inquiries from researchers and industry partners who are exploring data driven personalization
+                    are welcome.
                 </p>
 
                 <div>
                     <a class="btn btn-secondary" href="mailto:draburne@students.kennesaw.edu">
-                        <span class="btn-icon">✉</span>
-                        <span>Email Destiny</span>
+                        Email Destiny
                     </a>
                 </div>
             </div>
@@ -461,7 +411,7 @@
     </main>
 
     <footer>
-        <span>PRISM, Proxy Recognition and Inclusive Scoring Method</span>
+        <span>Adaptive Book Recommendation and Rating Prediction System</span>
         <span class="footer-accent">Kennesaw State University, Fall 2025</span>
     </footer>
 </div>

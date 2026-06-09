@@ -734,6 +734,11 @@ body {
   color: var(--sage-dark);
   background: var(--sage-xlight);
 }
+.card-btn--disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
 
 /* ── SKILLS ───────────────────────────────────── */
 .skills-section {

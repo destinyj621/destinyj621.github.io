@@ -6,40 +6,60 @@
   <title>Destiny Raburnel — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 
-  <!-- ── NAV ───────────────────────────────────────── -->
+  <!-- ── NAV ───────────────────────────────────── -->
   <nav class="nav">
-    <span class="nav-name">Destiny Raburnel</span>
+    <a href="#about" class="nav-logo">DR</a>
     <div class="nav-links">
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
-      <a href="https://www.linkedin.com/in/destinyraburnel/" target="_blank" class="nav-cta">LinkedIn</a>
+      <a href="mailto:destiny.raburnel@gmail.com" class="nav-cta">Get in Touch</a>
     </div>
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- ── HERO ──────────────────────────────────────── -->
+  <!-- ── HERO ──────────────────────────────────── -->
   <section class="hero" id="about">
+    <div class="hero-bg-blob hero-bg-blob--1"></div>
+    <div class="hero-bg-blob hero-bg-blob--2"></div>
     <div class="hero-inner">
-      <div class="hero-photo-wrap">
-        <img src="assets/images/destiny.png" alt="Destiny Raburnel" class="hero-photo" />
+
+      <div class="hero-photo-col fade-in">
+        <div class="hero-photo-frame">
+          <img src="assets/images/destiny.png" alt="Destiny Raburnel" class="hero-photo" />
+          <div class="hero-photo-ring"></div>
+        </div>
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span>Data Engineer · Primerica</span>
+        </div>
       </div>
-      <div class="hero-text">
-        <p class="hero-eyebrow">Data Engineer &amp; AI Engineer</p>
-        <h1 class="hero-name">Destiny<br /><span class="name-accent">Raburnel</span></h1>
+
+      <div class="hero-text-col fade-in fade-in--delay">
+        <p class="hero-eyebrow">Hi, I'm</p>
+        <h1 class="hero-name">Destiny<br /><em>Raburnel</em></h1>
+        <p class="hero-tagline">Data Engineer &amp; AI Engineer</p>
         <p class="hero-bio">
-          I build at the intersection of data engineering and applied AI — designing scalable pipelines,
-          fine-tuning LLMs, and shipping end-to-end intelligent systems. Currently a Data Engineer at
-          <strong>Primerica</strong>, pursuing dual Master's degrees in Artificial Intelligence and Software
-          Engineering at <strong>Kennesaw State University</strong>. BS in Biomedical Engineering from
-          <strong>Mercer University</strong>.
+          I build at the intersection of data engineering and applied AI — designing scalable
+          pipelines, fine-tuning LLMs, and shipping end-to-end intelligent systems.
+          Dual Master's candidate in AI and Software Engineering at
+          <strong>Kennesaw State University</strong>. Background in Biomedical Engineering
+          from <strong>Mercer University</strong>.
         </p>
+
         <div class="hero-actions">
-          <a href="mailto:destiny.raburnel@gmail.com" class="btn btn-primary">Get in Touch</a>
+          <a href="mailto:destiny.raburnel@gmail.com" class="btn btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in Touch
+          </a>
           <a href="https://www.linkedin.com/in/destinyraburnel/" target="_blank" class="btn btn-outline">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
@@ -49,109 +69,236 @@
             GitHub
           </a>
         </div>
+
         <div class="hero-edu">
           <div class="edu-item">
-            <span class="edu-dot"></span>
-            <span>MS Artificial Intelligence — KSU <span class="edu-year">2026</span></span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            MS Artificial Intelligence — KSU <span class="edu-year">· 2026</span>
           </div>
           <div class="edu-item">
-            <span class="edu-dot"></span>
-            <span>MS Software Engineering — KSU <span class="edu-year">2025</span></span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            MS Software Engineering — KSU <span class="edu-year">· 2025</span>
           </div>
           <div class="edu-item">
-            <span class="edu-dot"></span>
-            <span>BS Biomedical Engineering — Mercer University <span class="edu-year">2024</span></span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            BS Biomedical Engineering — Mercer <span class="edu-year">· 2024</span>
           </div>
         </div>
+      </div>
+
+    </div>
+
+    <div class="hero-stats fade-in fade-in--delay2">
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Degrees</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">AI Projects</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Companies</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">2+</span>
+        <span class="stat-label">Years Experience</span>
       </div>
     </div>
   </section>
 
-  <!-- ── PROJECTS ───────────────────────────────────── -->
+  <!-- ── EXPERIENCE ─────────────────────────────── -->
+  <section class="experience-section" id="experience">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">Where I've worked</p>
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot timeline-dot--active"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-head">
+              <div>
+                <h3 class="tcard-role">Data Engineer</h3>
+                <p class="tcard-company">Primerica</p>
+              </div>
+              <span class="tcard-date">June 2025 – Present</span>
+            </div>
+            <ul class="tcard-bullets">
+              <li>Designed Medallion Architecture (Bronze → Silver → Gold) ETL/ELT pipelines in Databricks for enterprise analytics</li>
+              <li>Built dimensional models &amp; Power BI dashboards supporting BI reporting and executive decision-making</li>
+              <li>Primary contributor for Palantir Foundry platform operations and AI-driven data initiatives</li>
+              <li>Worked with Dynatrace, QLIK Replicate, Jenkins, Kubernetes, and GitHub Actions across CI/CD workflows</li>
+            </ul>
+            <div class="tcard-tags">
+              <span class="ttag">Databricks</span>
+              <span class="ttag">Apache Spark</span>
+              <span class="ttag">Palantir Foundry</span>
+              <span class="ttag">Power BI</span>
+              <span class="ttag">Dynatrace</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-head">
+              <div>
+                <h3 class="tcard-role">Engineering Research Assistant</h3>
+                <p class="tcard-company">Mercer University</p>
+              </div>
+              <span class="tcard-date">Aug 2023 – May 2024</span>
+            </div>
+            <ul class="tcard-bullets">
+              <li>Collected and labeled real-world EMG sensor data for applied machine-learning experiments</li>
+              <li>Supported gesture-recognition model development using TensorFlow Lite on embedded systems</li>
+              <li>Collaborated with faculty on biomedical ML research involving instrumentation and embedded platforms</li>
+            </ul>
+            <div class="tcard-tags">
+              <span class="ttag">TensorFlow Lite</span>
+              <span class="ttag">EMG Sensors</span>
+              <span class="ttag">Embedded Systems</span>
+              <span class="ttag">ML Research</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-card">
+            <div class="tcard-head">
+              <div>
+                <h3 class="tcard-role">IT Finance Engineer Intern</h3>
+                <p class="tcard-company">Sephora HQ</p>
+              </div>
+              <span class="tcard-date">June – Aug 2023</span>
+            </div>
+            <ul class="tcard-bullets">
+              <li>Developed SAP ABAP programs for vendor and customer line item reports supporting IT finance</li>
+              <li>Automated data collection workflows, replacing manual Excel processes and reducing overhead</li>
+            </ul>
+            <div class="tcard-tags">
+              <span class="ttag">SAP ABAP</span>
+              <span class="ttag">SQL</span>
+              <span class="ttag">Financial Reporting</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────── -->
   <section class="projects-section" id="projects">
     <div class="section-inner">
-      <div class="section-header">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">What I've built</p>
         <h2 class="section-title">Projects</h2>
-        <p class="section-sub">A selection of work spanning AI systems, data engineering, and applied ML.</p>
+        <p class="section-sub">A selection of AI systems, data pipelines, and applied ML research.</p>
       </div>
 
       <div class="projects-grid">
 
         <!-- CognitiveLens -->
-        <article class="project-card">
-          <div class="card-top">
-            <div class="card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.04z"/></svg>
+        <article class="project-card project-card--featured fade-in">
+          <div class="card-accent-bar"></div>
+          <div class="card-inner">
+            <div class="card-head">
+              <div class="card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.04z"/></svg>
+              </div>
+              <div class="card-meta">
+                <span class="card-category">AI · Biomedical</span>
+                <span class="card-featured-badge">Featured</span>
+              </div>
             </div>
-            <span class="card-category">AI / Biomedical</span>
-          </div>
-          <h3 class="card-title">CognitiveLens</h3>
-          <p class="card-subtitle">Biomedical RAG System for Dementia Research</p>
-          <p class="card-desc">
-            End-to-end Retrieval-Augmented Generation pipeline answering natural language questions about
-            dementia grounded in real PubMed literature. Indexes 2,228 overlapping chunks from 466 medical
-            abstracts using Sentence Transformers and ChromaDB, then generates cited, evidence-grounded answers
-            via the Anthropic Claude API with adaptive thinking.
-          </p>
-          <div class="card-tags">
-            <span class="tag">RAG</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">ChromaDB</span>
-            <span class="tag">Claude API</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">Streamlit</span>
-            <span class="tag">PubMed</span>
-          </div>
-          <div class="card-links">
-            <a href="https://destinyj621.github.io/CognitiveLens/" target="_blank" class="card-btn btn-primary">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Live Demo
-            </a>
-            <a href="https://github.com/destinyj621/CognitiveLens" target="_blank" class="card-btn btn-ghost">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
+            <h3 class="card-title">CognitiveLens</h3>
+            <p class="card-subtitle">Biomedical RAG System for Dementia Research</p>
+            <ul class="card-highlights">
+              <li>End-to-end RAG pipeline grounded in 466 real PubMed abstracts (2,228 semantic chunks)</li>
+              <li>Semantic search via Sentence Transformers + ChromaDB with cosine similarity retrieval</li>
+              <li>Claude API (opus-4-8) with adaptive thinking for cited, evidence-grounded answers</li>
+              <li>FastAPI backend + Streamlit frontend with source cards and direct PubMed links</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag">RAG</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">Claude API</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">PubMed</span>
+            </div>
+            <div class="card-links">
+              <a href="https://destinyj621.github.io/CognitiveLens/" target="_blank" class="card-btn card-btn--primary">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/destinyj621/CognitiveLens" target="_blank" class="card-btn card-btn--ghost">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
           </div>
         </article>
 
-        <!-- Prompt Optimization -->
-        <article class="project-card">
-          <div class="card-top">
-            <div class="card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+        <!-- LLM Benchmarking -->
+        <article class="project-card fade-in">
+          <div class="card-accent-bar"></div>
+          <div class="card-inner">
+            <div class="card-head">
+              <div class="card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+              </div>
+              <span class="card-category">LLM · Benchmarking</span>
             </div>
-            <span class="card-category">LLM / Benchmarking</span>
-          </div>
-          <h3 class="card-title">LLM Optimization &amp; Benchmarking Platform</h3>
-          <p class="card-subtitle">Prompt Strategy Evaluation Workbench</p>
-          <p class="card-desc">
-            End-to-end benchmarking platform evaluating prompt strategies across multiple open-source LLMs on
-            NLP tasks including sentiment classification, summarization, and question answering. Tracks
-            ROUGE scores, LLM-as-judge scoring, latency, throughput, and energy consumption — stored and
-            queryable via a MySQL backend and REST API.
-          </p>
-          <div class="card-tags">
-            <span class="tag">Python</span>
-            <span class="tag">Streamlit</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Ollama</span>
-            <span class="tag">ROUGE</span>
-            <span class="tag">LLM-as-Judge</span>
-            <span class="tag">REST API</span>
-          </div>
-          <div class="card-links">
-            <a href="https://destinyj621.github.io/prompt_optimization/" target="_blank" class="card-btn btn-primary">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Live Demo
-            </a>
-            <a href="https://github.com/destinyj621/prompt_optimization" target="_blank" class="card-btn btn-ghost">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
-            <a href="assets/Industry-11-Prompt_Optimization-FinalReport.pdf" target="_blank" class="card-btn btn-ghost">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
-              Report
-            </a>
+            <h3 class="card-title">LLM Optimization &amp; Benchmarking Platform</h3>
+            <p class="card-subtitle">Prompt Strategy Evaluation Workbench</p>
+            <ul class="card-highlights">
+              <li>Evaluates zero-shot &amp; few-shot prompt strategies across multiple open-source LLMs</li>
+              <li>Multi-dimensional metrics: ROUGE, LLM-as-judge, latency, throughput, energy cost</li>
+              <li>Full-stack experiment tracking with MySQL backend and REST API</li>
+            </ul>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Ollama</span>
+              <span class="tag">ROUGE</span>
+              <span class="tag">LLM-as-Judge</span>
+              <span class="tag">REST API</span>
+            </div>
+            <div class="card-links">
+              <a href="https://destinyj621.github.io/prompt_optimization/" target="_blank" class="card-btn card-btn--primary">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/destinyj621/prompt_optimization" target="_blank" class="card-btn card-btn--ghost">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="assets/Industry-11-Prompt_Optimization-FinalReport.pdf" target="_blank" class="card-btn card-btn--ghost">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+                Report
+              </a>
+            </div>
           </div>
         </article>
 
@@ -159,43 +306,59 @@
     </div>
   </section>
 
-  <!-- ── SKILLS ─────────────────────────────────────── -->
+  <!-- ── SKILLS ─────────────────────────────────── -->
   <section class="skills-section" id="skills">
     <div class="section-inner">
-      <div class="section-header">
+      <div class="section-header fade-in">
+        <p class="section-eyebrow">What I work with</p>
         <h2 class="section-title">Technical Skills</h2>
       </div>
       <div class="skills-grid">
-        <div class="skill-group">
-          <h4 class="skill-group-title">Languages</h4>
+        <div class="skill-group fade-in">
+          <div class="skill-group-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+            <h4 class="skill-group-title">Languages</h4>
+          </div>
           <div class="skill-tags">
             <span class="stag">Python</span><span class="stag">SQL</span><span class="stag">TypeScript</span>
             <span class="stag">JavaScript</span><span class="stag">Java</span><span class="stag">Scala</span>
             <span class="stag">SAP ABAP</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">Data Engineering</h4>
+        <div class="skill-group fade-in">
+          <div class="skill-group-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <h4 class="skill-group-title">Data Engineering</h4>
+          </div>
           <div class="skill-tags">
-            <span class="stag">Databricks</span><span class="stag">Apache Spark</span><span class="stag">Medallion Architecture</span>
-            <span class="stag">ETL/ELT</span><span class="stag">AWS S3</span><span class="stag">QLIK Replicate</span>
+            <span class="stag">Databricks</span><span class="stag">Apache Spark</span>
+            <span class="stag">Medallion Architecture</span><span class="stag">ETL/ELT</span>
+            <span class="stag">AWS S3</span><span class="stag">QLIK Replicate</span>
             <span class="stag">SQL Server</span><span class="stag">Palantir Foundry</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">AI &amp; ML</h4>
+        <div class="skill-group fade-in">
+          <div class="skill-group-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 12l-8 4.9"/></svg>
+            <h4 class="skill-group-title">AI &amp; Machine Learning</h4>
+          </div>
           <div class="skill-tags">
             <span class="stag">LLMs</span><span class="stag">RAG</span><span class="stag">PyTorch</span>
-            <span class="stag">Hugging Face</span><span class="stag">Prompt Engineering</span><span class="stag">Prompt Caching</span>
-            <span class="stag">Semantic Embeddings</span><span class="stag">NLP</span><span class="stag">Deep Learning</span>
+            <span class="stag">Hugging Face</span><span class="stag">Prompt Engineering</span>
+            <span class="stag">Prompt Caching</span><span class="stag">Semantic Embeddings</span>
+            <span class="stag">NLP</span><span class="stag">Deep Learning</span>
             <span class="stag">Claude API</span><span class="stag">OpenAI API</span>
           </div>
         </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">Cloud &amp; DevOps</h4>
+        <div class="skill-group fade-in">
+          <div class="skill-group-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <h4 class="skill-group-title">Cloud &amp; DevOps</h4>
+          </div>
           <div class="skill-tags">
-            <span class="stag">Docker</span><span class="stag">Kubernetes</span><span class="stag">GitHub Actions</span>
-            <span class="stag">Jenkins</span><span class="stag">Vercel</span><span class="stag">Railway</span>
+            <span class="stag">Docker</span><span class="stag">Kubernetes</span>
+            <span class="stag">GitHub Actions</span><span class="stag">Jenkins</span>
+            <span class="stag">Vercel</span><span class="stag">Railway</span>
             <span class="stag">Supabase</span><span class="stag">Dynatrace</span>
           </div>
         </div>
@@ -203,17 +366,43 @@
     </div>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <!-- ── CONNECT ────────────────────────────────── -->
+  <section class="connect-section">
+    <div class="connect-inner fade-in">
+      <p class="connect-eyebrow">Let's connect</p>
+      <h2 class="connect-title">Open to opportunities &amp; collaboration</h2>
+      <p class="connect-sub">Whether it's a full-time role, a research collaboration, or a freelance AI project — I'd love to hear from you.</p>
+      <div class="connect-actions">
+        <a href="mailto:destiny.raburnel@gmail.com" class="btn btn-primary btn-lg">Send me an Email</a>
+        <a href="https://www.linkedin.com/in/destinyraburnel/" target="_blank" class="btn btn-outline btn-lg">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
   <footer class="footer">
     <div class="footer-inner">
-      <span class="footer-name">Destiny Raburnel</span>
+      <span class="footer-copy">© 2025 Destiny Raburnel</span>
       <div class="footer-links">
-        <a href="mailto:destiny.raburnel@gmail.com">destiny.raburnel@gmail.com</a>
+        <a href="mailto:destiny.raburnel@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/destinyraburnel/" target="_blank">LinkedIn</a>
         <a href="https://github.com/destinyj621" target="_blank">GitHub</a>
       </div>
     </div>
   </footer>
 
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-links--open');
+      hamburger.classList.toggle('nav-hamburger--open');
+    });
+  </script>
 </body>
 </html>

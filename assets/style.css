@@ -96,6 +96,25 @@ body {
 }
 .nav-links a:hover { color: var(--sage-dark); }
 
+.nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem !important;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.38rem 0.9rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--beige-dark);
+  transition: all .18s ease;
+}
+.nav-resume:hover {
+  border-color: var(--sage-mid);
+  color: var(--sage-dark);
+  background: var(--sage-xlight);
+}
+
 .nav-cta {
   background: var(--sage) !important;
   color: var(--white) !important;

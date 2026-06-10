@@ -623,6 +623,18 @@ body {
   padding: 0.24rem 0.65rem;
   border-radius: 20px;
 }
+.card-wip-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--cream-dark);
+  border: 1.5px solid var(--beige-dark);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
 .card-featured-badge {
   font-size: 0.65rem;
   font-weight: 700;
